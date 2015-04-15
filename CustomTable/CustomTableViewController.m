@@ -46,5 +46,20 @@
     cell.prepTimeLabel.text = [recipeTimes objectAtIndex:indexPath.row];
     return cell;
 }
-                    
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath
+                                                                    *)indexPath
+{
+    NSString* selectedRecipe = [recipeNames objectAtIndex:indexPath.row];
+    UIAlertView *messageAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Row Selected" message:selectedRecipe
+                                 delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    // Display Alert Message
+    [messageAlert show];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+}
+
+
+
 @end
