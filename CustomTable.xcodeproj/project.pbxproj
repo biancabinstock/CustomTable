@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		96D8ACA91ADDBFF100BE19A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACA81ADDBFF100BE19A9 /* main.m */; };
 		96D8ACAC1ADDBFF100BE19A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACAB1ADDBFF100BE19A9 /* AppDelegate.m */; };
-		96D8ACAF1ADDBFF100BE19A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACAE1ADDBFF100BE19A9 /* ViewController.m */; };
 		96D8ACB21ADDBFF100BE19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D8ACB01ADDBFF100BE19A9 /* Main.storyboard */; };
 		96D8ACB41ADDBFF100BE19A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D8ACB31ADDBFF100BE19A9 /* Images.xcassets */; };
 		96D8ACB71ADDBFF100BE19A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D8ACB51ADDBFF100BE19A9 /* LaunchScreen.xib */; };
 		96D8ACC31ADDBFF100BE19A9 /* CustomTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACC21ADDBFF100BE19A9 /* CustomTableTests.m */; };
+		96D8ACCE1ADDE9B800BE19A9 /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACCD1ADDE9B800BE19A9 /* CustomTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		96D8ACA81ADDBFF100BE19A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96D8ACAA1ADDBFF100BE19A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96D8ACAB1ADDBFF100BE19A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96D8ACAD1ADDBFF100BE19A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96D8ACAE1ADDBFF100BE19A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		96D8ACB11ADDBFF100BE19A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96D8ACB31ADDBFF100BE19A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96D8ACB61ADDBFF100BE19A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		96D8ACBC1ADDBFF100BE19A9 /* CustomTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D8ACC11ADDBFF100BE19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D8ACC21ADDBFF100BE19A9 /* CustomTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableTests.m; sourceTree = "<group>"; };
+		96D8ACCC1ADDE9B800BE19A9 /* CustomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewController.h; sourceTree = "<group>"; };
+		96D8ACCD1ADDE9B800BE19A9 /* CustomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				96D8ACAA1ADDBFF100BE19A9 /* AppDelegate.h */,
 				96D8ACAB1ADDBFF100BE19A9 /* AppDelegate.m */,
-				96D8ACAD1ADDBFF100BE19A9 /* ViewController.h */,
-				96D8ACAE1ADDBFF100BE19A9 /* ViewController.m */,
 				96D8ACB01ADDBFF100BE19A9 /* Main.storyboard */,
 				96D8ACB31ADDBFF100BE19A9 /* Images.xcassets */,
 				96D8ACB51ADDBFF100BE19A9 /* LaunchScreen.xib */,
 				96D8ACA61ADDBFF100BE19A9 /* Supporting Files */,
+				96D8ACCC1ADDE9B800BE19A9 /* CustomTableViewController.h */,
+				96D8ACCD1ADDE9B800BE19A9 /* CustomTableViewController.m */,
 			);
 			path = CustomTable;
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96D8ACAF1ADDBFF100BE19A9 /* ViewController.m in Sources */,
 				96D8ACAC1ADDBFF100BE19A9 /* AppDelegate.m in Sources */,
+				96D8ACCE1ADDE9B800BE19A9 /* CustomTableViewController.m in Sources */,
 				96D8ACA91ADDBFF100BE19A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +412,7 @@
 				96D8ACC81ADDBFF100BE19A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96D8ACC91ADDBFF100BE19A9 /* Build configuration list for PBXNativeTarget "CustomTableTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				96D8ACCB1ADDBFF100BE19A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
