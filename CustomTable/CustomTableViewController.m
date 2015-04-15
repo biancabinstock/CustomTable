@@ -7,6 +7,7 @@
 //
 
 #import "CustomTableViewController.h"
+#import "CustomTableViewCell.h"
 
 @implementation CustomTableViewController
 
@@ -36,9 +37,9 @@
 (NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.textLabel.text = [recipeNames objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
+    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell.nameLabel.text = [recipeNames objectAtIndex:indexPath.row];
+    cell.thumbnailImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
     return cell;
 }
                     
