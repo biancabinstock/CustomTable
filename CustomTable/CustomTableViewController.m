@@ -19,8 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     recipeNames = @[@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast",
-                    @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut",
-                    @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQPork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry BirdsCake", @"Ham and Cheese Panini"];
+                    @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut",@"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQPork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry BirdsCake", @"Ham and Cheese Panini"];
     
     recipeImages = @[@"egg_benedict.jpg", @"mushroom_risotto.jpg", @"full_breakfast.jpg",
                                      @"hamburger.jpg", @"ham_and_egg_sandwich.jpg", @"creme_brelee.jpg",
@@ -44,11 +43,18 @@
     cell.nameLabel.text = [recipeNames objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
     cell.prepTimeLabel.text = [recipeTimes objectAtIndex:indexPath.row];
+    if (recipeChecked[indexPath.row]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath
                                                                     *)indexPath
+
+
 {
     NSString* selectedRecipe = [recipeNames objectAtIndex:indexPath.row];
     UIAlertView *messageAlert = [[UIAlertView alloc]
@@ -58,8 +64,11 @@
     [messageAlert show];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    recipeChecked[indexPath.row] = YES;
 }
 
+ BOOL recipeChecked[16];
 
 
 @end
