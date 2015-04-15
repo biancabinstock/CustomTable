@@ -14,6 +14,7 @@
 {
     NSArray *recipeNames;
     NSArray *recipeImages;
+    NSArray *recipeTimes;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +28,8 @@
                                      @"instant_noodle_with_egg.jpg", @"noodle_with_bbq_pork.jpg",
                                      @"japanese_noodle_with_pork.jpg", @"green_tea.jpg", @"thai_shrimp_cake.jpg",
                                      @"angry_birds_cake.jpg", @"ham_and_cheese_panini.jpg"];
+    
+    recipeTimes = @[@"20 min", @"15 min", @"30 min", @"45 min", @"15 min", @"30 min", @"25 min", @"15 min", @"40 min", @"25 min", @"20 min", @"15 min", @"30 min", @"45 min", @"15 min", @"30 min"];
                     }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -40,6 +43,7 @@
     CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.nameLabel.text = [recipeNames objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
+    cell.prepTimeLabel.text = [recipeTimes objectAtIndex:indexPath.row];
     return cell;
 }
                     
