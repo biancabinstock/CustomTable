@@ -14,6 +14,7 @@
 		96D8ACB71ADDBFF100BE19A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D8ACB51ADDBFF100BE19A9 /* LaunchScreen.xib */; };
 		96D8ACC31ADDBFF100BE19A9 /* CustomTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACC21ADDBFF100BE19A9 /* CustomTableTests.m */; };
 		96D8ACCE1ADDE9B800BE19A9 /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACCD1ADDE9B800BE19A9 /* CustomTableViewController.m */; };
+		96D8ACD11ADDF92F00BE19A9 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACD01ADDF92F00BE19A9 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		96D8ACC21ADDBFF100BE19A9 /* CustomTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableTests.m; sourceTree = "<group>"; };
 		96D8ACCC1ADDE9B800BE19A9 /* CustomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewController.h; sourceTree = "<group>"; };
 		96D8ACCD1ADDE9B800BE19A9 /* CustomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewController.m; sourceTree = "<group>"; };
+		96D8ACCF1ADDF92F00BE19A9 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		96D8ACD01ADDF92F00BE19A9 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				96D8ACA61ADDBFF100BE19A9 /* Supporting Files */,
 				96D8ACCC1ADDE9B800BE19A9 /* CustomTableViewController.h */,
 				96D8ACCD1ADDE9B800BE19A9 /* CustomTableViewController.m */,
+				96D8ACCF1ADDF92F00BE19A9 /* CustomTableViewCell.h */,
+				96D8ACD01ADDF92F00BE19A9 /* CustomTableViewCell.m */,
 			);
 			path = CustomTable;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				96D8ACAC1ADDBFF100BE19A9 /* AppDelegate.m in Sources */,
 				96D8ACCE1ADDE9B800BE19A9 /* CustomTableViewController.m in Sources */,
+				96D8ACD11ADDF92F00BE19A9 /* CustomTableViewCell.m in Sources */,
 				96D8ACA91ADDBFF100BE19A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
