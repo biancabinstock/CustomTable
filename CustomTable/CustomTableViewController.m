@@ -12,14 +12,16 @@
 @implementation CustomTableViewController
 
 {
-    NSArray *recipeNames;
+    NSMutableArray *recipeNames;
     NSArray *recipeImages;
     NSArray *recipeTimes;
+    BOOL recipeChecked[16];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    recipeNames = @[@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast",
-                    @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut",@"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQPork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry BirdsCake", @"Ham and Cheese Panini"];
+    recipeNames = [NSMutableArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast",
+                     @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut",@"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQPork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry BirdsCake", @"Ham and Cheese Panini", nil];
     
     recipeImages = @[@"egg_benedict.jpg", @"mushroom_risotto.jpg", @"full_breakfast.jpg",
                                      @"hamburger.jpg", @"ham_and_egg_sandwich.jpg", @"creme_brelee.jpg",
@@ -63,14 +65,34 @@
                                  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     // Display Alert Message
     [messageAlert show];
+    
+//    Ading checkmark
+    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+//    toggling checkmark
+    if (recipeChecked[indexPath.row]) {
+        recipeChecked [indexPath.row] = NO;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    } else {
+        recipeChecked [indexPath.row] = YES;
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    recipeChecked[indexPath.row] = YES;
+  
    
 }
 
- BOOL recipeChecked[16];
+- (void)tableView:(UITableView *)tableView commitEditingStyle:
+(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // Remove the row from data model
+    [recipeNames removeObjectAtIndex:indexPath.row];
+    // Request table view to reload
+    [tableView reloadData];
+}
 
 
 @end
