@@ -35,6 +35,7 @@
 {
     return [recipeNames count];
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
 (NSIndexPath *)indexPath
 {
@@ -66,6 +67,7 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     recipeChecked[indexPath.row] = YES;
+   
 }
 
  BOOL recipeChecked[16];
