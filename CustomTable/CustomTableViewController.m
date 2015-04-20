@@ -63,19 +63,15 @@
 //    Ading checkmark
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
+    //recipeChecked[indexPath.row] = YES;
 //    toggling checkmark
-    if (recipeChecked[indexPath.row]) {
-        recipeChecked [indexPath.row] = NO;
+    
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
     } else {
-        recipeChecked [indexPath.row] = YES;
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  
-   
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:
