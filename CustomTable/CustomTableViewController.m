@@ -20,17 +20,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    recipeNames = [NSMutableArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast",
-                     @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut",@"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQPork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry BirdsCake", @"Ham and Cheese Panini", nil];
-    
-    recipeImages = @[@"egg_benedict.jpg", @"mushroom_risotto.jpg", @"full_breakfast.jpg",
-                                     @"hamburger.jpg", @"ham_and_egg_sandwich.jpg", @"creme_brelee.jpg",
-                                     @"white_chocolate_donut.jpg", @"starbucks_coffee.jpg", @"vegetable_curry.jpg",
-                                     @"instant_noodle_with_egg.jpg", @"noodle_with_bbq_pork.jpg",
-                                     @"japanese_noodle_with_pork.jpg", @"green_tea.jpg", @"thai_shrimp_cake.jpg",
-                                     @"angry_birds_cake.jpg", @"ham_and_cheese_panini.jpg"];
-    
-    recipeTimes = @[@"20 min", @"15 min", @"30 min", @"45 min", @"15 min", @"30 min", @"25 min", @"15 min", @"40 min", @"25 min", @"20 min", @"15 min", @"30 min", @"45 min", @"15 min", @"30 min"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"recipes" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    recipeNames = [dict objectForKey:@"Name"];
+    recipeImages = [dict objectForKey:@"Image"];
+    recipeTimes = [dict objectForKey:@"PrepTime"];
                     }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
