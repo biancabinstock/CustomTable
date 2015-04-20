@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    Set the Label / recipe text with the selected recipe /and recipe time
+    self.recipeLabel.text = self.recipeName;
+    self.recipeTimeLabel.text = self.recipeTime;
+    
     // Do any additional setup after loading the view.
 }
 

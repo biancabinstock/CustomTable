@@ -8,6 +8,7 @@
 
 #import "CustomTableViewController.h"
 #import "CustomTableViewCell.h"
+#import "DetailViewController.h"
 
 @implementation CustomTableViewController
 
@@ -84,5 +85,16 @@
     [tableView reloadData];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewController *destViewController = segue.destinationViewController;
+        destViewController.recipeName = [recipeNames objectAtIndex:indexPath.row];
+        destViewController.recipeTime = [recipeTimes objectAtIndex:indexPath.row];
+    
+    
+    
+    }
+}
 
 @end
