@@ -9,8 +9,10 @@
 #import "CustomTableViewController.h"
 #import "CustomTableViewCell.h"
 #import "DetailViewController.h"
+#import "Recipe.h"
 
 @implementation CustomTableViewController
+
 
 {
     NSMutableArray *recipeNames;

@@ -10,6 +10,7 @@
 		968018FC1AE977D400291135 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968018FB1AE977D400291135 /* AboutViewController.m */; };
 		968018FF1AE979BB00291135 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 968018FD1AE979BB00291135 /* about.jpg */; };
 		968019001AE979BB00291135 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 968018FE1AE979BB00291135 /* about.html */; };
+		968019031AE992B200291135 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 968019021AE992B200291135 /* Recipe.m */; };
 		96D8ACA91ADDBFF100BE19A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACA81ADDBFF100BE19A9 /* main.m */; };
 		96D8ACAC1ADDBFF100BE19A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8ACAB1ADDBFF100BE19A9 /* AppDelegate.m */; };
 		96D8ACB21ADDBFF100BE19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D8ACB01ADDBFF100BE19A9 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 		968018FB1AE977D400291135 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ../AboutViewController.m; sourceTree = "<group>"; };
 		968018FD1AE979BB00291135 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = about.jpg; path = "../../../book-tabbar-about/about.jpg"; sourceTree = "<group>"; };
 		968018FE1AE979BB00291135 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = "../../../book-tabbar-about/about.html"; sourceTree = "<group>"; };
+		968019011AE992B200291135 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		968019021AE992B200291135 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		96D8ACA31ADDBFF100BE19A9 /* CustomTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D8ACA71ADDBFF100BE19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D8ACA81ADDBFF100BE19A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 		96D8AC9A1ADDBFF100BE19A9 = {
 			isa = PBXGroup;
 			children = (
+				968019011AE992B200291135 /* Recipe.h */,
+				968019021AE992B200291135 /* Recipe.m */,
 				96D8ACA51ADDBFF100BE19A9 /* CustomTable */,
 				96D8ACBF1ADDBFF100BE19A9 /* CustomTableTests */,
 				96D8ACA41ADDBFF100BE19A9 /* Products */,
@@ -247,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968018FC1AE977D400291135 /* AboutViewController.m in Sources */,
+				968019031AE992B200291135 /* Recipe.m in Sources */,
 				96FBBAB51AE58A7300BB161B /* DetailViewController.m in Sources */,
 				96D8ACAC1ADDBFF100BE19A9 /* AppDelegate.m in Sources */,
 				96D8ACCE1ADDE9B800BE19A9 /* CustomTableViewController.m in Sources */,
