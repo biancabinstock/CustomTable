@@ -14,15 +14,14 @@
 
 @implementation AboutViewController
 
-
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        // Add code to load web content in UIWebView
-       // NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"about.html" ofType:nil]];
-        NSURL *url = [NSURL URLWithString:@"http://www.google.ca"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [self.webView loadRequest:request];
-    }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Add code to load web content in UIWebView
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle
+                                          mainBundle]pathForResource:@"about.html" ofType:nil]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+}
 
 
 
