@@ -196,6 +196,7 @@
         DetailViewController *destViewController = segue.destinationViewController;
         Recipe *recipe = [recipes objectAtIndex:indexPath.row];
         destViewController.recipeName = recipe.name;
+        destViewController.recipeTime = recipe.prepTime;
         
     }
 }
