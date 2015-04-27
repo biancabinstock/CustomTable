@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recipe.h"
 
 @interface DetailViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UILabel *recipeLabel;
-@property (nonatomic, strong) NSString *recipeName;
-@property (nonatomic, strong) IBOutlet UILabel *recipeTimeLabel;
-@property (nonatomic, strong) NSString *recipeTime;
+
+@property (strong, nonatomic) IBOutlet UIImageView *recipeImageView;
+@property (strong, nonatomic) IBOutlet UILabel *prepTimeLabel;
+@property (strong, nonatomic) IBOutlet UITextView *ingredientsTextView;
+
+@property (nonatomic, strong) Recipe *recipe;
 
 @end

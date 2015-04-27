@@ -220,17 +220,19 @@
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DetailViewController *destViewController = segue.destinationViewController;
-        Recipe *recipe = [recipes objectAtIndex:indexPath.row];
-        destViewController.recipeName = recipe.name;
-//        destViewController.recipeTime = recipe.prepTime;
-        
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:
+(id)sender {
+    if ([segue.identifier
+         isEqualToString:@"showRecipeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView
+                                  indexPathForSelectedRow];
+        DetailViewController *destViewController =
+        segue.destinationViewController;
+        Recipe *recipe = [recipes
+                          objectAtIndex:indexPath.row];
+        destViewController.recipe = recipe;
     }
 }
-        
         
         
 

@@ -14,14 +14,19 @@
 
 @implementation DetailViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-//    Set the Label / recipe text with the selected recipe /and recipe time
-    self.recipeLabel.text = self.recipeName;
-    self.recipeTimeLabel.text = self.recipeTime;
-    
-    // Do any additional setup after loading the view.
+//    sets title of nav bar as name of recipe
+    self.title = self.recipe.name;
+//    configures prep time label and set the recipe image
+    self.prepTimeLabel.text = self.recipe.prepTime;
+    self.recipeImageView.image = [UIImage imageNamed:self.recipe.image];
+    NSMutableString *ingredientsText = [NSMutableString string];
+    for (NSString* ingredient in self.recipe.ingredients) {
+        [ingredientsText appendFormat:@"%@\n", ingredient];
+    }
+        self.ingredientsTextView.text = ingredientsText;
 }
 
 - (void)didReceiveMemoryWarning {
